@@ -70,12 +70,11 @@ while boucle_jeu:
             if combat_statut == "Victoire":
                 print(f"Niveau de vie : {niveau_vie}")
                 print(f"Nombre de victoires consécutives : {nombre_victoires_consecutives}")
-                # proposer un nouvel adversaire
-                force_adversaire = random.randint(1,5)
             else: # combat soldé par la défaite de l'usager
                 print(f"Niveau de vie : {niveau_vie}")
-                # proposer un nouvel adversaire
-                force_adversaire = random.randint(1, 5)
+
+            # proposer un nouvel adversaire
+            force_adversaire = random.randint(1, 5)
 
             # niveau de vie de l’usager est inférieur ou égal à 0
             # L’ordinateur annonce à l’usager la fin de la partie et le nombre de victoire(s) réussie(s).
