@@ -59,15 +59,15 @@ while boucle_jeu:
             if lance_de <= force_adversaire:
                 niveau_vie = niveau_vie - force_adversaire
                 nombre_defaites = nombre_defaites + 1
-                combat_statut = "Défaite"
+                statut_combat = "Défaite"
             else:  # niveau de vie de l'usager augumente dans le cas d'une victoire
                 niveau_vie = niveau_vie + force_adversaire
                 nombre_victoires = nombre_victoires + 1
                 nombre_victoires_consecutives = nombre_victoires_consecutives + 1
-                combat_statut = "Victoire"
+                statut_combat = "Victoire"
 
             # combat soldé par la victoire de l'usager
-            if combat_statut == "Victoire":
+            if statut_combat == "Victoire":
                 print(f"Niveau de vie : {niveau_vie}")
                 print(f"Nombre de victoires consécutives : {nombre_victoires_consecutives}")
             else:  # combat soldé par la défaite de l'usager
