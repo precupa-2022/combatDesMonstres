@@ -23,8 +23,8 @@ statut_combat = "Aucun"
 
 boucle_jeu = True
 while boucle_jeu:
-    force_adversaire = random.randint(1, 5)      # force de monstre
-    numero_adversaire = numero_adversaire + 1   # augumenter les nombres de monstres combatus
+    force_adversaire = random.randint(1, 5)  # force de monstre
+    numero_adversaire = numero_adversaire + 1  # augumenter les nombres de monstres combatus
 
     # afficher le menu de la partie et demander l'utilisateur de faire une choix
     print(f"Vous tombez face à face avec un adversaire de difficulté : {force_adversaire} ")
@@ -53,14 +53,14 @@ while boucle_jeu:
 
             # afficher le statut de combat
             if numero_combat >= 2:
-                print(f"Dérnier combat = {combat_statut}")
+                print(f"Dérnier combat = {statut_combat}")
 
             # niveau de vie de l'usager diminue dans le cas d'une défaite
             if lance_de <= force_adversaire:
                 niveau_vie = niveau_vie - force_adversaire
                 nombre_defaites = nombre_defaites + 1
                 combat_statut = "Défaite"
-            else: # niveau de vie de l'usager augumente dans le cas d'une victoire
+            else:  # niveau de vie de l'usager augumente dans le cas d'une victoire
                 niveau_vie = niveau_vie + force_adversaire
                 nombre_victoires = nombre_victoires + 1
                 nombre_victoires_consecutives = nombre_victoires_consecutives + 1
@@ -70,7 +70,7 @@ while boucle_jeu:
             if combat_statut == "Victoire":
                 print(f"Niveau de vie : {niveau_vie}")
                 print(f"Nombre de victoires consécutives : {nombre_victoires_consecutives}")
-            else: # combat soldé par la défaite de l'usager
+            else:  # combat soldé par la défaite de l'usager
                 print(f"Niveau de vie : {niveau_vie}")
 
             # proposer un nouvel adversaire
@@ -88,14 +88,16 @@ while boucle_jeu:
     elif choix == 3:  # le choix utilisateur est d'afficher les règles du jeu
         print(f"Pour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l’adversaire.")
         print(f"Dans ce cas, le niveau de vie de l’usager est augmenté de la force de l’adversaire.")
-        print(f"Une défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force de l’adversaire.")
+        print(f"Une défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force de "
+              f"l’adversaire.")
         print(f"Dans ce cas, le niveau de vie de l’usager est diminué de la force de l’adversaire.")
         print(f"Pour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l’adversaire.")
         print(f"Dans ce cas, le niveau de vie de l’usager est diminué de la force de l’adversaire.")
         print(f" ")
         print(f"La partie se termine lorsque les points de vie de l’usager tombent sous 0.")
         print(f" ")
-        print(f"L’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une pénalité de 1 point de vie.")
+        print(f"L’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une pénalité "
+              f"de 1 point de vie.")
 
     else:  # le choix utilisateur est quitter jeu
         print(f"Merci et au revoir … ")
