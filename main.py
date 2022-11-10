@@ -12,7 +12,7 @@ Description: TP3 - combat des monstres
 """
 import random
 
-niveau_vie = 20 # l'usager commence avec 20 points de vie
+niveau_vie = 20  # l'usager commence avec 20 points de vie
 # initialiser les variables utilisées dans les messages
 numero_adversaire = 0
 numero_combat = 0
@@ -23,7 +23,7 @@ statut_combat = "Aucun"
 
 boucle_jeu = True
 while boucle_jeu:
-    force_adversaire = random.randint(1,5)      # force de monstre
+    force_adversaire = random.randint(1, 5)      # force de monstre
     numero_adversaire = numero_adversaire + 1   # augumenter les nombres de monstres combatus
 
     # afficher le menu de la partie et demander l'utilisateur de faire une choix
@@ -35,7 +35,7 @@ while boucle_jeu:
     print(f"4 - Quitter la partie ")
     choix = int(input("Entrez votre choix :"))
 
-    if choix == 1: # le choix utilisateur est de combattre
+    if choix == 1:  # le choix utilisateur est de combattre
         choix_combattre = True
         while choix_combattre:
             # augumenter le numéro combat pour chaque lancement de dé
@@ -48,7 +48,7 @@ while boucle_jeu:
             print(f"Combat {numero_combat} : victoires {nombre_victoires} vs defaites {nombre_defaites}")
 
             # afficher le résultat de lancement dé usager
-            lance_de = random.randint(1,6)
+            lance_de = random.randint(1, 6)
             print(f"Lancer du dé : {lance_de}")
 
             # afficher le statut de combat
@@ -82,10 +82,10 @@ while boucle_jeu:
                 print(f"La partie est terminée, vous avez vaincu {nombre_victoires} monstre(s).")
                 choix_combattre = False
 
-    elif choix == 2: # le choix utilisateur est de conturner cet adversaire et aller ouvrir une autre porte
-        niveau_vie = niveau_vie - 1 # pénalité de 1 point de vie
+    elif choix == 2:  # le choix utilisateur est de conturner cet adversaire et aller ouvrir une autre porte
+        niveau_vie = niveau_vie - 1  # pénalité de 1 point de vie
 
-    elif choix == 3: # le choix utilisateur est d'afficher les règles du jeu
+    elif choix == 3:  # le choix utilisateur est d'afficher les règles du jeu
         print(f"Pour réussir un combat, il faut que la valeur du dé lancé soit supérieure à la force de l’adversaire.")
         print(f"Dans ce cas, le niveau de vie de l’usager est augmenté de la force de l’adversaire.")
         print(f"Une défaite a lieu lorsque la valeur du dé lancé par l’usager est inférieure ou égale à la force de l’adversaire.")
@@ -97,6 +97,6 @@ while boucle_jeu:
         print(f" ")
         print(f"L’usager peut combattre ou éviter chaque adversaire, dans le cas de l’évitement, il y a une pénalité de 1 point de vie.")
 
-    else: # le choix utilisateur est quitter jeu
+    else:  # le choix utilisateur est quitter jeu
         print(f"Merci et au revoir … ")
         boucle_jeu = False
